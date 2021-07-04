@@ -9,8 +9,6 @@
 }
 
 #campgroundCarousel {
-    /* display: block; */
     width: auto;
-    height: 400px;
-    margin-left: auto;
+    max-height: 400px;
 }
