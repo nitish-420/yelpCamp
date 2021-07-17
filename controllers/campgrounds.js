@@ -64,6 +64,7 @@ module.exports.updateCampground = async(req, res) => {
     if (req.body.deleteImages) {
         for (let filename of req.body.deleteImages) {
             await cloudinary.uploader.destroy(filename);
+            // Remember this is not working in yelpCamp deployed
         }
         await campground.updateOne({ $pull: { images: { filename: { $in: req.body.deleteImages } } } })
     }
